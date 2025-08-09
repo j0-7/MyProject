@@ -1,1 +1,229 @@
-file contant
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Started - IT Department Intern Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+        header { background: #2d3e50; color: #fff; padding: 20px 0; text-align: center; }
+        nav { background: #1abc9c; padding: 10px 0; text-align: center; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; display: inline-block; }
+        .container { max-width: 900px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+        h2 { color: #2d3e50; }
+        .tutorial-list { list-style: none; padding: 0; }
+        .tutorial-list li { margin-bottom: 20px; }
+        .tutorial-title { font-size: 1.2em; font-weight: bold; }
+        .tutorial-desc { color: #555; }
+        footer { text-align: center; color: #888; padding: 20px 0; margin-top: 40px; }
+        .header-wallpaper {
+            position: relative;
+            width: 100%;
+            min-height: 220px;
+            background: url('IT office.webp') center center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header-overlay {
+            width: 100%;
+            padding: 50px 0 40px 0;
+            background: rgba(45,62,80,0.68);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .header-title {
+            color: #fff;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+        .header-sub {
+            color: #f4f4f4;
+            font-size: 1.1em;
+            margin-bottom: 0;
+            max-width: 500px;
+            text-align: center;
+            text-shadow: 0 1px 6px rgba(0,0,0,0.18);
+        }
+        .info-box { background: #f8f8f8; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); padding: 18px 14px; margin-bottom: 10px; }
+        .quote-box { background: #f8f8f8; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); padding: 18px 14px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-wallpaper">
+            <div class="header-overlay">
+                <h1 class="header-title"> Welcome to your IT Internship!</h1>
+                <p class="header-sub">This guide will walk you through everything you need to hit the ground running — no stress, no guessing.</p>
+            </div>
+        </div>
+    </header>
+    <div class="navbar-outer">
+        <nav>
+            <a href="getting-started.html">Getting Started</a>
+            <a href="networking.html">Networking</a>
+            <a href="security.html">Security</a>
+            <a href="tools.html">Tools</a>
+            <a href="infrastructure.html">Infrastructure</a>
+        </nav>
+    </div>
+    <div class="container">
+        <section class="info-box" style="margin-bottom: 28px;">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+                <span style="font-size: 2em; margin-top: 2px;">💡</span>
+                <div>
+                    <h2 style="margin: 0 0 8px 0; font-size: 1.2em; color: #1abc9c;">What Is the IT Department?</h2>
+                    <div style="color: #333; font-size: 1.08em;">
+                        The IT (Information Technology) department helps keep everything in the company running smoothly. It manages computers, networks, software, and security making sure everyone can work without tech problems.<br><br>
+                        IT supports the whole organization by setting up systems, solving issues, and protecting data.
+                    </div>
+                </div>
+            </div>
+            <!-- <section id="quote-box" class="quote-box" style="margin-bottom: 32px; display: none; opacity: 0; transition: opacity 0.5s ease;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span id="brain-emoji" class="clickable-emoji" onclick="toggleQuote()">🧠</span>
+                    <div style="color: #2d3e50; font-size: 1.05em; font-style: italic;">
+                        "In IT, there's always more than one way to solve a problem. Your goal isn't just to fix, it's to improve."
+                    </div>
+                </div>
+            </section> -->
+            
+        </section>
+      
+      
+        <span id="brain-emoji" class="clickable-emoji" onclick="toggleQuote()"style="font-size:2em; ">🧠</span>
+  
+        <section id="quote-box" class="quote-box" style="margin-bottom: 32px; display: none; opacity: 0; transition: opacity 0.5s ease;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+             
+
+                <div id="quote-text" style="display: none; opacity: 0; transition: opacity 0.5s ease; color: #2d3e50; font-size: 1.05em; font-style: italic;">
+                    "In IT, there's always more than one way to solve a problem. Your goal isn't just to fix, it's to improve."
+                </div>
+            </div>
+        </section>
+        <script>
+    function toggleQuote() {
+    const box = document.getElementById("quote-box");
+    const emoji = document.getElementById("brain-emoji");
+    const text = document.getElementById("quote-text");
+
+    emoji.classList.add("rotate-once");
+    setTimeout(() => emoji.classList.remove("rotate-once"), 600);
+
+    if (box.style.display === "none" || box.style.display === "") {
+        box.style.display = "block";
+        setTimeout(() => {
+            box.style.opacity = 1;
+            text.style.display = "block";
+            setTimeout(() => text.style.opacity = 1, 10);
+        }, 10);
+    } else {
+        text.style.opacity = 0;
+        setTimeout(() => {
+            text.style.display = "none";
+            box.style.opacity = 0;
+            setTimeout(() => box.style.display = "none", 500);
+        }, 200);
+    }
+}
+
+        </script>
+        
+        <section id="meet-it-dept">
+            <h2>✅ Meet the IT Department</h2>
+            <div class="org-grid">
+                <div class="org-card" title="Your supervisor">
+                    <div class="org-icon">🧑‍💼</div>
+                    <div class="org-title">IT Manager</div>
+                    <div class="org-desc">Your supervisor</div>
+                </div>
+                <div class="org-card" title="Handles tickets and user support">
+                    <div class="org-icon">💻</div>
+                    <div class="org-title">Support Team</div>
+                    <div class="org-desc">Handles tickets</div>
+                </div>
+                <div class="org-card" title="Keeps systems safe">
+                    <div class="org-icon">🔒</div>
+                    <div class="org-title">Security Team</div>
+                    <div class="org-desc">Keeps systems safe</div>
+                </div>
+                <div class="org-card" title="Manages the infrastructure">
+                    <div class="org-icon">🌐</div>
+                    <div class="org-title">Network Team</div>
+                    <div class="org-desc">Manages infrastructure</div>
+                </div>
+            </div>
+            <div style="margin-top: 10px; color: #555; font-size: 0.98em;">These are the people you'll hear from or shadow during your internship.</div>
+        </section>
+        <section id="first-day-checklist">
+            <h2>✅ Your First Day Checklist</h2>
+            <ul class="checklist">
+                <li onclick="toggleCheck(this)"><span class="checkbox"></span>Sign in to your email</li>
+                <li onclick="toggleCheck(this)"><span class="checkbox"></span>Get your workstation set up (<a href="#workstation" style="color:#1abc9c;">see guide</a>)</li>
+                <li onclick="toggleCheck(this)"><span class="checkbox"></span>Connect to the internal network</li>
+                <li onclick="toggleCheck(this)"><span class="checkbox"></span>Explore the intern portal (this site!)</li>
+                <li onclick="toggleCheck(this)"><span class="checkbox"></span>Introduce yourself to the team</li>
+            </ul>
+        </section>
+        <section id="comm-tools">
+            <h2>💬 Communication Tools</h2>
+            <div class="comm-grid">
+                <div class="comm-card">
+                    <div class="comm-icon">📧</div>
+                    <div class="comm-title">Outlook</div>
+                    <div class="comm-desc">Work email & scheduling</div>
+                </div>
+                <div class="comm-card">
+                    <div class="comm-icon">💬</div>
+                    <div class="comm-title">Teams</div>
+                    <div class="comm-desc">Daily messaging & meetings</div>
+                </div>
+                <div class="comm-card">
+                    <div class="comm-icon">📁</div>
+                    <div class="comm-title">OneDrive</div>
+                    <div class="comm-desc">Cloud file storage</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 IT Department. For questions, contact <a href="mailto:it-support@example.com">it-support@example.com</a>
+    </footer>
+    <style>
+        .org-grid { display: flex; gap: 18px; margin-bottom: 10px; flex-wrap: wrap; }
+        .org-card { background: #f8f8f8; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); padding: 18px 14px; flex: 1 1 160px; text-align: center; min-width: 120px; cursor: pointer; transition: box-shadow 0.2s, background 0.2s; margin-bottom: 10px; }
+        .org-card:hover { background: #e8f6f3; box-shadow: 0 4px 12px rgba(26,188,156,0.12); }
+        .org-icon { font-size: 2em; margin-bottom: 6px; }
+        .org-title { font-weight: bold; font-size: 1.08em; color: #2d3e50; }
+        .org-desc { color: #555; font-size: 0.97em; }
+        .checklist { list-style: none; padding: 0; margin: 0; }
+        .checklist li { background: #f8f8f8; border-radius: 8px; margin-bottom: 10px; padding: 12px 16px; font-size: 1.08em; display: flex; align-items: center; cursor: pointer; transition: background 0.2s; }
+        .checklist li.checked { background: #d1f2eb; text-decoration: line-through; color: #888; }
+        .checkbox { display: inline-block; width: 20px; height: 20px; border: 2px solid #1abc9c; border-radius: 4px; margin-right: 12px; background: #fff; position: relative; }
+        .checklist li.checked .checkbox { background: #1abc9c; }
+        .checklist li.checked .checkbox:after { content: '\2713'; color: #fff; position: absolute; left: 4px; top: -2px; font-size: 1.2em; }
+        .tools-grid { display: flex; gap: 18px; margin-bottom: 10px; flex-wrap: wrap; }
+        .tool-card { background: #f8f8f8; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); padding: 18px 14px; flex: 1 1 120px; text-align: center; min-width: 100px; cursor: pointer; transition: box-shadow 0.2s, background 0.2s; margin-bottom: 10px; }
+        .tool-card:hover { background: #e8f6f3; box-shadow: 0 4px 12px rgba(26,188,156,0.12); }
+        .tool-icon { font-size: 2em; margin-bottom: 6px; }
+        .tool-title { font-weight: bold; font-size: 1.08em; color: #2d3e50; }
+        .tool-desc-box { background: #fff; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); padding: 18px 14px; margin-bottom: 10px; font-size: 1.05em; color: #2d3e50; }
+        .comm-grid { display: flex; gap: 18px; margin-bottom: 10px; flex-wrap: wrap; }
+        .comm-card { background: #f8f8f8; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); padding: 18px 14px; flex: 1 1 120px; text-align: center; min-width: 100px; margin-bottom: 10px; }
+        .comm-icon { font-size: 2em; margin-bottom: 6px; }
+        .comm-title { font-weight: bold; font-size: 1.08em; color: #2d3e50; }
+        .comm-desc { color: #555; font-size: 0.97em; }
+        @media (max-width: 700px) { .org-grid, .tools-grid, .comm-grid { flex-direction: column; } }
+    </style>
+    <script>
+        function toggleCheck(item) {
+            item.classList.toggle('checked');
+        }
+    </script>
+</body>
+</html> 
