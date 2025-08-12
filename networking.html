@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Networking - IT Department Intern Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-wallpaper">
+            <div class="header-overlay">
+                <h1 class="header-title">👋 Welcome to your IT Internship!</h1>
+                <p class="header-sub">This guide will walk you through everything you need to hit the ground running — no stress, no guessing.</p>
+            </div>
+        </div>
+    </header>
+    <div class="navbar-outer">
+        <nav>
+            <a href="getting-started.html">Getting Started</a>
+            <a href="networking.html">Networking</a>
+            <a href="security.html">Security</a>
+            <a href="tools.html">Tools</a>
+            <a href="infrastructure.html">Infrastructure</a>
+        </nav>
+    </div>
+    <div class="container">
+        <section id="networking">
+            <h2>Networking</h2>
+            <div class="accordion-list">
+                <div class="accordion-card">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-arrow">&#9654;</span>
+                        Understanding the Company Network
+                    </div>
+                    <div class="accordion-content">
+                        <div class="tutorial-desc">Learn about LAN, Wi-Fi, VPN, and how to connect securely.</div>
+                        <p>The company network consists of both wired (LAN) and wireless (Wi-Fi) connections. VPN (Virtual Private Network) allows secure remote access. Always use strong passwords and never share your credentials. For more details, refer to the IT handbook or contact your supervisor.</p>
+                    </div>
+                </div>
+                <div class="accordion-card">
+               
+                <div class="accordion-card">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-arrow">&#9654;</span>
+                        Troubleshooting Network Issues
+                    </div>
+                    <div class="accordion-content">
+                        <div class="tutorial-desc">Basic steps to diagnose and resolve common network problems.</div>
+                        <p>If you experience connectivity issues, first check your cables and Wi-Fi connection. Restart your device if needed. If the problem persists, contact IT support and provide details about the issue, including error messages and steps already taken.</p>
+                
+                        <br><strong>Useful Tools You Can Try:</strong><br>
+                        • <code>ipconfig</code> — View your IP address and gateway<br>
+                        • <code>ping</code> — Check if a device is reachable<br>
+                        • <code>tracert</code> — See the route your data takes<br>
+                        • <code>nslookup</code> — Check DNS resolution<br>
+                        • <code>netstat</code> — View current network connections<br><br>
+                
+                        💡 <em>Try these in Command Prompt (CMD). They're safe and help you troubleshoot simple problems.</em>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 IT Department. For questions, contact <a href="mailto:it-support@example.com">it-support@example.com</a>
+    </footer>
+    <script>
+        function toggleAccordion(header) {
+            var card = header.parentElement;
+            card.classList.toggle('open');
+        }
+    </script>
+</body>
+</html> 

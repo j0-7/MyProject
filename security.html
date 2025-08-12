@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security - IT Department Intern Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-wallpaper">
+            <div class="header-overlay">
+                <h1 class="header-title">👋 Welcome to your IT Internship!</h1>
+                <p class="header-sub">This guide will walk you through everything you need to hit the ground running — no stress, no guessing.</p>
+            </div>
+        </div>
+    </header>
+    <div class="navbar-outer">
+        <nav>
+            <a href="getting-started.html">Getting Started</a>
+            <a href="networking.html">Networking</a>
+            <a href="security.html">Security</a>
+            <a href="tools.html">Tools</a>
+            <a href="infrastructure.html">Infrastructure</a>
+        </nav>
+    </div>
+    <div class="container">
+        <section id="security">
+            <h2>Security</h2>
+            <div class="accordion-list">
+                <div class="accordion-card">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-arrow">&#9654;</span>
+                        Password Best Practices
+                    </div>
+                    <div class="accordion-content">
+                        <div class="tutorial-desc">How to create strong passwords and manage them safely.</div>
+                        <p>Use a mix of uppercase, lowercase, numbers, and symbols. Avoid using the same password for multiple accounts. Consider using a password manager to keep your credentials secure.</p>
+                    </div>
+                </div>
+                <div class="accordion-card">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-arrow">&#9654;</span>
+                        Recognizing Phishing Emails
+                    </div>
+                    <div class="accordion-content">
+                        <div class="tutorial-desc">Tips to identify and report suspicious emails.</div>
+                        <p>Look for suspicious links, unexpected attachments, and requests for sensitive information. Always verify the sender's email address and report any suspicious emails to IT support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 IT Department. For questions, contact <a href="mailto:it-support@example.com">it-support@example.com</a>
+    </footer>
+    <script>
+        function toggleAccordion(header) {
+            var card = header.parentElement;
+            card.classList.toggle('open');
+        }
+    </script>
+</body>
+</html> 

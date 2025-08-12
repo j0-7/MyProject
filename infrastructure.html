@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT Infrastructure - IT Department Intern Tutorials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        .computer-model-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .model-viewer-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .component-tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+            max-width: 200px;
+            text-align: center;
+        }
+        .component-tooltip.show {
+            opacity: 1;
+        }
+        .component-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .component-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .component-card h4 {
+            margin: 0 0 8px 0;
+            color: #1abc9c;
+            font-size: 16px;
+        }
+        .component-card p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-wallpaper">
+            <div class="header-overlay">
+                <h1 class="header-title"> Welcome to your IT Internship!</h1>
+                <p class="header-sub">This guide will walk you through everything you need to hit the ground running — no stress, no guessing.</p>
+            </div>
+        </div>
+    </header>
+    <div class="navbar-outer">
+        <nav>
+            <a href="getting-started.html">Getting Started</a>
+            <a href="networking.html">Networking</a>
+            <a href="security.html">Security</a>
+            <a href="tools.html">Tools</a>
+            <a href="infrastructure.html">Infrastructure</a>
+        </nav>
+    </div>
+    <div class="container">
+        <section class="computer-model-section">
+            <h2>🖥️ Interactive Computer Components</h2>
+            <p style="color: #666; margin-bottom: 20px;">Hover over the 3D model to learn about different computer components</p>
+            
+            <div class="model-viewer-container">
+                <iframe 
+                    title="Computer Components - 3D model on Sketchfab"
+                    frameborder="0"
+                    allowfullscreen 
+                    mozallowfullscreen="true" 
+                    webkitallowfullscreen="true" 
+                    allow="autoplay; fullscreen; xr-spatial-tracking" 
+                    xr-spatial-tracking 
+                    execution-while-out-of-viewport 
+                    execution-while-not-rendered 
+                    web-share 
+                    width="100%" 
+                    height="480" 
+                    src="https://sketchfab.com/models/4daeb72925d140809bdfd51634a1908e/embed?autostart=1&ui_theme=dark">
+                </iframe>
+                
+                <!-- Tooltip for component information -->
+                <div class="component-tooltip" id="tooltip"></div>
+            </div>
+            
+            <div class="component-info">
+                <div class="component-card">
+                    <h4>🖥️ CPU (Central Processing Unit)</h4>
+                    <p>The brain of the computer that processes all instructions and calculations.</p>
+                </div>
+                <div class="component-card">
+                    <h4>🧠 RAM (Random Access Memory)</h4>
+                    <p>Temporary storage that holds data and programs currently in use.</p>
+                </div>
+                <div class="component-card">
+                    <h4>💾 Storage (HDD/SSD)</h4>
+                    <p>Permanent storage for files, programs, and the operating system.</p>
+                </div>
+                <div class="component-card">
+                    <h4>🎮 GPU (Graphics Processing Unit)</h4>
+                    <p>Handles graphics rendering and video processing tasks.</p>
+                </div>
+                <div class="component-card">
+                    <h4>🔌 Motherboard</h4>
+                    <p>The main circuit board that connects all components together.</p>
+                </div>
+                <div class="component-card">
+                    <h4>⚡ Power Supply</h4>
+                    <p>Converts electricity and provides power to all computer components.</p>
+                </div>
+            </div>
+        </section>
+        <section id="infrastructure">
+            <h2>🏗️ IT Infrastructure Overview</h2>
+            <ul class="accordion-list">
+                <li class="accordion-card">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-arrow">▶</span>
+                        Network Infrastructure
+                    </div>
+                    <div class="accordion-content">
+                        <div class="tutorial-desc">
+                            <strong>Core Network Components:</strong><br>
+                            • Routers and Switches - The backbone of network connectivity<br>
+                            • Firewalls - Security barriers protecting the network<br>
+                            • Wireless Access Points - Providing Wi-Fi connectivity<br>
+                            • Network Cables - Physical connections (Ethernet, fiber optic)<br><br>
+                            <strong>Network Types:</strong><br>
+                            • LAN (Local Area Network) - Internal company network<br>
+                            • WAN (Wide Area Network) - Connections between locations<br>
+                            • VPN (Virtual Private Network) - Secure remote access
+                        </div>
+                    </div>
+                </li>
+                <li class="accordion-card">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-arrow">▶</span>
+                        Server Infrastructure
+                    </div>
+                    <div class="accordion-content">
+                        <div class="tutorial-desc">
+                            <strong>Server Types:</strong><br>
+                            • File Servers - Store and manage company files<br>
+                            • Application Servers - Run business applications<br>
+                            • Database Servers - Store and manage data<br>
+                            • Web Servers - Host websites and web applications<br>
+                            • Mail Servers - Handle email communication<br><br>
+                            <strong>Server Management:</strong><br>
+                            • Virtualization - Running multiple servers on one physical machine<br>
+                            • Backup Systems - Protecting data from loss<br>
+                            • Monitoring - Tracking server performance and health
+                        </div>
+                    </div>
+                </li>
+                <li class="accordion-card">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-arrow">▶</span>
+                        Cloud Infrastructure
+                    </div>
+                    <div class="accordion-content">
+                        <div class="tutorial-desc">
+                            <strong>Cloud Services:</strong><br>
+                            • IaaS (Infrastructure as a Service) - Virtual servers and storage<br>
+                            • PaaS (Platform as a Service) - Development platforms<br>
+                            • SaaS (Software as a Service) - Ready-to-use applications<br><br>
+                            <strong>Popular Cloud Providers:</strong><br>
+                            • Microsoft Azure - Enterprise cloud solutions<br>
+                            • Amazon Web Services (AWS) - Comprehensive cloud services<br>
+                            • Google Cloud Platform - AI and data-focused services<br><br>
+                            <strong>Benefits:</strong><br>
+                            • Scalability - Easy to expand or reduce resources<br>
+                            • Cost Efficiency - Pay only for what you use<br>
+                            • Reliability - High availability and disaster recovery
+                        </div>
+                    </div>
+                </li>
+                <li class="accordion-card">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-arrow">▶</span>
+                        Data Storage & Backup
+                    </div>
+                    <div class="accordion-content">
+                        <div class="tutorial-desc">
+                            <strong>Storage Types:</strong><br>
+                            • Local Storage - Hard drives and SSDs on individual computers<br>
+                            • Network Storage - Shared storage accessible across the network<br>
+                            • Cloud Storage - Remote storage accessible via internet<br><br>
+                            <strong>Backup Strategies:</strong><br>
+                            • Full Backup - Complete copy of all data<br>
+                            • Incremental Backup - Only changed files since last backup<br>
+                            • Differential Backup - All changes since last full backup<br><br>
+                            <strong>Data Protection:</strong><br>
+                            • RAID (Redundant Array of Independent Disks) - Data redundancy<br>
+                            • Encryption - Protecting sensitive data<br>
+                            • Access Controls - Managing who can access what data
+                        </div>
+                    </div>
+                </li>
+                <li class="accordion-card">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-arrow">▶</span>
+                        End-User Devices
+                    </div>
+                    <div class="accordion-content">
+                        <div class="tutorial-desc">
+                            <strong>Device Types:</strong><br>
+                            • Desktop Computers - Workstation computers<br>
+                            • Laptops - Portable computers for mobile work<br>
+                            • Tablets - Touch-screen devices for specific tasks<br>
+                            • Mobile Devices - Smartphones for business communication<br><br>
+                            <strong>Device Management:</strong><br>
+                            • MDM (Mobile Device Management) - Managing mobile devices<br>
+                            • Software Deployment - Installing applications remotely<br>
+                            • Patch Management - Keeping systems updated<br>
+                            • Asset Tracking - Monitoring device inventory
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 IT Department. For questions, contact <a href="mailto:it-support@example.com">it-support@example.com</a>
+    </footer>
+    <script>
+        function toggleAccordion(header) {
+            const card = header.parentElement;
+            const content = card.querySelector('.accordion-content');
+            const arrow = header.querySelector('.accordion-arrow');
+            
+            if (card.classList.contains('open')) {
+                card.classList.remove('open');
+                arrow.style.transform = 'rotate(0deg)';
+            } else {
+                card.classList.add('open');
+                arrow.style.transform = 'rotate(90deg)';
+            }
+        }
+
+        // 3D Model Interactive Features
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltip = document.getElementById('tooltip');
+            
+            // Component information for tooltips
+            const componentInfo = {
+                'cpu': {
+                    name: 'CPU (Central Processing Unit)',
+                    description: 'The brain of the computer that processes all instructions and calculations.',
+                    icon: '🖥️'
+                },
+                'ram': {
+                    name: 'RAM (Random Access Memory)',
+                    description: 'Temporary storage that holds data and programs currently in use.',
+                    icon: '🧠'
+                },
+                'storage': {
+                    name: 'Storage (HDD/SSD)',
+                    description: 'Permanent storage for files, programs, and the operating system.',
+                    icon: '💾'
+                },
+                'gpu': {
+                    name: 'GPU (Graphics Processing Unit)',
+                    description: 'Handles graphics rendering and video processing tasks.',
+                    icon: '🎮'
+                },
+                'motherboard': {
+                    name: 'Motherboard',
+                    description: 'The main circuit board that connects all components together.',
+                    icon: '🔌'
+                },
+                'powersupply': {
+                    name: 'Power Supply',
+                    description: 'Converts electricity and provides power to all computer components.',
+                    icon: '⚡'
+                },
+                'fan': {
+                    name: 'Cooling Fan',
+                    description: 'Keeps components cool by circulating air and preventing overheating.',
+                    icon: '💨'
+                },
+                'heatsink': {
+                    name: 'Heatsink',
+                    description: 'Metal component that absorbs and dissipates heat from the CPU.',
+                    icon: '❄️'
+                }
+            };
+
+            function showTooltip(x, y, component) {
+                tooltip.innerHTML = `
+                    <strong>${component.icon} ${component.name}</strong><br>
+                    ${component.description}
+                `;
+                tooltip.style.left = x + 10 + 'px';
+                tooltip.style.top = y - 10 + 'px';
+                tooltip.classList.add('show');
+            }
+
+            function hideTooltip() {
+                tooltip.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html> 
